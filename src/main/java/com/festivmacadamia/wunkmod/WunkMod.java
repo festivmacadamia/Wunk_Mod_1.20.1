@@ -1,4 +1,4 @@
-package com.festivmacadamia.templatemod;
+package com.festivmacadamia.wunkmod;
 
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
@@ -14,12 +14,12 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(TemplateMod.MOD_ID)
-public class TemplateMod {
-    public static final String MOD_ID = "templatemod";
+@Mod(WunkMod.MOD_ID)
+public class WunkMod {
+    public static final String MOD_ID = "wunkmod";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public TemplateMod() {
+    public WunkMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
