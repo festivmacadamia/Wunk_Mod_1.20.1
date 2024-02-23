@@ -1,6 +1,12 @@
 package com.festivmacadamia.wunkmod;
 
+import com.festivmacadamia.wunkmod.block.ModBlocks;
+import com.festivmacadamia.wunkmod.entity.client.CapybaraRenderer;
+import com.festivmacadamia.wunkmod.entity.ModEntities;
+import com.festivmacadamia.wunkmod.item.ModItems;
+import com.festivmacadamia.wunkmod.item.ModCreativeModeTabs;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -12,6 +18,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import software.bernie.geckolib.GeckoLib;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(WunkMod.MOD_ID)
@@ -21,6 +28,13 @@ public class WunkMod {
 
     public WunkMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        ModCreativeModeTabs.register(modEventBus);
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+        ModEntities.register(modEventBus);
+        GeckoLib.initialize();
+
+
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
@@ -43,7 +57,7 @@ public class WunkMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            EntityRenderers.register(ModEntities.CAPYBARA.get(), CapybaraRenderer::new);
         }
     }
 }

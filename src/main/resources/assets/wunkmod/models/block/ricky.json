@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "wunkmod:block/ricky_bottom",
+    "east": "wunkmod:block/ricky_left",
+    "north": "wunkmod:block/ricky_front",
+    "particle": "wunkmod:block/ricky_front",
+    "south": "wunkmod:block/ricky_back",
+    "up": "wunkmod:block/ricky_top",
+    "west": "wunkmod:block/ricky_right"
+  }
+}
