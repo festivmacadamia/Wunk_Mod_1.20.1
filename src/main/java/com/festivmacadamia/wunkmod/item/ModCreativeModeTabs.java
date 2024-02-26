@@ -1,12 +1,11 @@
 package com.festivmacadamia.wunkmod.item;
 
-
 import com.festivmacadamia.wunkmod.WunkMod;
-
 import com.festivmacadamia.wunkmod.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -20,16 +19,9 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.RICKY.get()))
                     .title(Component.translatable("creativetab.wunk_tab"))
                     .displayItems((pParameters, pOutput) -> {
-
-                    //blocks
                         pOutput.accept(ModBlocks.RICKY.get());
-
-                    //spawn eggs
                         pOutput.accept(ModItems.CAPYBARA_SPAWN_EGG.get());
-
-                    //items
-
-                    })
+                    }).withTabsBefore(CreativeModeTabs.BUILDING_BLOCKS, CreativeModeTabs.COLORED_BLOCKS, CreativeModeTabs.INGREDIENTS, CreativeModeTabs.SPAWN_EGGS)
                     .build());
 
 
