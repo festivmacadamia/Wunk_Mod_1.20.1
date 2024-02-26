@@ -3,7 +3,7 @@
   "textures": {
     "bottom": "wunkmod:block/ricky_bottom",
     "front": "wunkmod:block/ricky_front",
-    "side": "wunkmod:block/ricky_left",
+    "side": "wunkmod:block/ricky_side",
     "top": "wunkmod:block/ricky_top"
   }
 }
