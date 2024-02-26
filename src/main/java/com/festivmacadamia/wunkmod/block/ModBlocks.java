@@ -3,6 +3,7 @@ package com.festivmacadamia.wunkmod.block;
 import java.util.function.Supplier;
 
 import com.festivmacadamia.wunkmod.WunkMod;
+import com.festivmacadamia.wunkmod.block.custom.RickyBlock;
 import com.festivmacadamia.wunkmod.item.ModItems;
 
 import net.minecraft.core.BlockPos;
@@ -26,8 +27,8 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = 
         DeferredRegister.create(ForgeRegistries.BLOCKS, WunkMod.MOD_ID);
 
-    public static final RegistryObject<Block> RICKY = registerBlock("ricky",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
+    public static final RegistryObject<RickyBlock> RICKY = registerBlock("ricky",
+            () -> new RickyBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

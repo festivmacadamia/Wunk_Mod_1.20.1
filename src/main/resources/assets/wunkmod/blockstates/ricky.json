@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=east": {
+      "model": "wunkmod:block/ricky",
+      "y": 90
+    },
+    "facing=north": {
       "model": "wunkmod:block/ricky"
+    },
+    "facing=south": {
+      "model": "wunkmod:block/ricky",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "wunkmod:block/ricky",
+      "y": 270
     }
   }
 }
