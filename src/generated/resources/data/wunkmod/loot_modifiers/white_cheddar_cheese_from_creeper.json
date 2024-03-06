@@ -1,0 +1,10 @@
+{
+  "type": "wunkmod:add_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:entity/creeper"
+    }
+  ],
+  "item": "wunkmod:white_cheddar_cheese"
+}

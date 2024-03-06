@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "wunkmod:item/cookies_and_creme_hershey_kiss"
+  }
+}

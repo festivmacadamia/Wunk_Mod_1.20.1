@@ -1,4 +1,8 @@
 {
-  "entries": [],
+  "entries": [
+    "wunkmod:corn_seed_from_tall_grass",
+    "wunkmod:black_tea_seed_from_tall_grass",
+    "wunkmod:white_cheddar_cheese_from_creeper"
+  ],
   "replace": false
 }

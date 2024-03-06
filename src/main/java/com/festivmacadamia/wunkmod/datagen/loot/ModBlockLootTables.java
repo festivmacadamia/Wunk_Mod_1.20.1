@@ -2,6 +2,8 @@ package com.festivmacadamia.wunkmod.datagen.loot;
 
 import com.festivmacadamia.wunkmod.block.ModBlocks;
 
+import com.festivmacadamia.wunkmod.block.custom.BlackTeaCropBlock;
+import com.festivmacadamia.wunkmod.block.custom.CornCropBlock;
 import com.festivmacadamia.wunkmod.item.ModItems;
 import com.festivmacadamia.wunkmod.block.ModBlocks;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
@@ -34,6 +36,19 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     protected void generate() {
         this.dropSelf(ModBlocks.RICKY.get());
 
+        LootItemCondition.Builder lootitemcondition$builder = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.BLACK_TEA_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BlackTeaCropBlock.AGE, 5));
+
+        this.add(ModBlocks.BLACK_TEA_CROP.get(), createCropDrops(ModBlocks.BLACK_TEA_CROP.get(), ModItems.BLACK_TEA.get(),
+                ModItems.BLACK_TEA_SEEDS.get(), lootitemcondition$builder));
+
+        LootItemCondition.Builder lootitemcondition$builder2 = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 7));
+
+        this.add(ModBlocks.CORN_CROP.get(), createCropDrops(ModBlocks.CORN_CROP.get(), ModItems.CORN.get(),
+                ModItems.CORN_SEEDS.get(), lootitemcondition$builder2));
     }
 
     @Override

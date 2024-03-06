@@ -1,3 +1,21 @@
-// 1.20.1	2024-02-22T12:41:22.154466	Recipes
-1c224a7df5a556f5ff57873dc248398fc90d7237 data/wunkmod/advancements/recipes/misc/ricky.json
+// 1.20.1	2024-03-04T15:32:03.201332	Recipes
+1c224a7df5a556f5ff57873dc248398fc90d7237 data/wunkmod/advancements/recipes/decorations/ricky.json
+4d95b8b0e8969a90b0d75fd4cbffa840b0f761a5 data/wunkmod/advancements/recipes/food/cookies_and_creme_hershey_kiss.json
+2d6e0c8b8681761f9cad298ab4cf83b3ede6b524 data/wunkmod/advancements/recipes/food/hershey_kiss.json
+987e962740280df8c6e9cecfffa3f69b92e52252 data/wunkmod/advancements/recipes/food/iced_tea.json
+a17db274a932ddfc36c44ffb557c77446147bb7e data/wunkmod/advancements/recipes/food/popcorn_campfire.json
+76e6f0831a017727dae74aba331d40d32a08082e data/wunkmod/advancements/recipes/food/popcorn_furnace.json
+def88a06d8adc50d299755a6df74039f60460ced data/wunkmod/advancements/recipes/food/popcorn_smoker.json
+3f907d717f9e79ee75d1d08c9d5f5d52af313829 data/wunkmod/advancements/recipes/food/sweet_iced_tea.json
+c7f6d37d1f840962c8bc9dfddc21950eadef5f37 data/wunkmod/advancements/recipes/food/sweetened_iced_tea.json
+e07b2677688640522d3a348933146e22a9b82411 data/wunkmod/advancements/recipes/food/white_cheddar_popcorn.json
+2cebe5858886fa96600694ae05eaf9ddef601b94 data/wunkmod/recipes/cookies_and_creme_hershey_kiss.json
+77187aadecaaa27b14114632ccbca97a16d3ea97 data/wunkmod/recipes/hershey_kiss.json
+b31de3260e21e4ca9d9ebf596f6328021be383ac data/wunkmod/recipes/iced_tea.json
+8493355786eabbcad34f950793adf49712f79711 data/wunkmod/recipes/popcorn_campfire.json
+20e0a4eed273ca3038378f6fee87e85a2908b765 data/wunkmod/recipes/popcorn_furnace.json
+e94bbd9e719e9bef8f82baccc8bf0f5c8105502a data/wunkmod/recipes/popcorn_smoker.json
 3f1dd5fabb81edf08df8123edb41e77e1a3d6f60 data/wunkmod/recipes/ricky.json
+68db368a48f500c2d2ba598fa25b78dec0348d13 data/wunkmod/recipes/sweet_iced_tea.json
+1dd99e0662decd77ea5e7a0b89b491f8edb0a493 data/wunkmod/recipes/sweetened_iced_tea.json
+80dc576f578aa1220f7c5d22f71ebd3cfd5d944c data/wunkmod/recipes/white_cheddar_popcorn.json

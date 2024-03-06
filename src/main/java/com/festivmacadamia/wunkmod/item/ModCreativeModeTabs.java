@@ -21,6 +21,17 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModBlocks.RICKY.get());
                         pOutput.accept(ModItems.CAPYBARA_SPAWN_EGG.get());
+                        pOutput.accept(ModItems.BLACK_TEA.get());
+                        pOutput.accept(ModItems.BLACK_TEA_SEEDS.get());
+                        pOutput.accept(ModItems.CORN.get());
+                        pOutput.accept(ModItems.CORN_SEEDS.get());
+                        pOutput.accept(ModItems.ICED_TEA.get());
+                        pOutput.accept(ModItems.SWEET_ICED_TEA.get());
+                        pOutput.accept(ModItems.POPCORN.get());
+                        pOutput.accept(ModItems.WHITE_CHEDDAR_POPCORN.get());
+                        pOutput.accept(ModItems.WHITE_CHEDDAR_CHEESE.get());
+                        pOutput.accept(ModItems.HERSHEY_KISS.get());
+                        pOutput.accept(ModItems.COOKIES_AND_CREME_HERSHEY_KISS.get());
                     }).withTabsBefore(CreativeModeTabs.BUILDING_BLOCKS, CreativeModeTabs.COLORED_BLOCKS, CreativeModeTabs.INGREDIENTS, CreativeModeTabs.SPAWN_EGGS)
                     .build());
 

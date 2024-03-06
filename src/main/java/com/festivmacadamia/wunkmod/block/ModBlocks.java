@@ -3,21 +3,15 @@ package com.festivmacadamia.wunkmod.block;
 import java.util.function.Supplier;
 
 import com.festivmacadamia.wunkmod.WunkMod;
+import com.festivmacadamia.wunkmod.block.custom.BlackTeaCropBlock;
+import com.festivmacadamia.wunkmod.block.custom.CornCropBlock;
 import com.festivmacadamia.wunkmod.block.custom.RickyBlock;
 import com.festivmacadamia.wunkmod.item.ModItems;
 
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -29,6 +23,11 @@ public class ModBlocks {
 
     public static final RegistryObject<RickyBlock> RICKY = registerBlock("ricky",
             () -> new RickyBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
+
+    public static final RegistryObject<Block> BLACK_TEA_CROP = BLOCKS.register("black_tea_crop",
+            () -> new BlackTeaCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+    public static final RegistryObject<Block> CORN_CROP = BLOCKS.register("corn_crop",
+            () -> new CornCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

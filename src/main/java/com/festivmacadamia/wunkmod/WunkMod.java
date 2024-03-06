@@ -5,6 +5,8 @@ import com.festivmacadamia.wunkmod.entity.client.CapybaraRenderer;
 import com.festivmacadamia.wunkmod.entity.ModEntities;
 import com.festivmacadamia.wunkmod.item.ModItems;
 import com.festivmacadamia.wunkmod.item.ModCreativeModeTabs;
+import com.festivmacadamia.wunkmod.loot.ModLootModifiers;
+import com.festivmacadamia.wunkmod.sound.ModSoundEvents;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
@@ -31,7 +33,9 @@ public class WunkMod {
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
         ModEntities.register(modEventBus);
+        ModSoundEvents.register(modEventBus);
         GeckoLib.initialize();
 
 

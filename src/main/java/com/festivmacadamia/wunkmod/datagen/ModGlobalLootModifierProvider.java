@@ -2,6 +2,8 @@ package com.festivmacadamia.wunkmod.datagen;
 
 
 import com.festivmacadamia.wunkmod.WunkMod;
+import com.festivmacadamia.wunkmod.item.ModItems;
+import com.festivmacadamia.wunkmod.loot.AddItemModifier;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
@@ -47,7 +49,15 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
         add("CHOOSENAME", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("chests/CHOOSECHEST")).build() }, ModItems.CHOOSEITEM.get()));
         */
+        add("corn_seed_from_tall_grass", new AddItemModifier(new LootItemCondition[] {
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
+                LootItemRandomChanceCondition.randomChance(0.35f).build()}, ModItems.CORN_SEEDS.get()));
+        add("black_tea_seed_from_tall_grass", new AddItemModifier(new LootItemCondition[] {
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
+                LootItemRandomChanceCondition.randomChance(0.35f).build()}, ModItems.BLACK_TEA_SEEDS.get()));
 
+        add("white_cheddar_cheese_from_creeper", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(new ResourceLocation("entity/creeper")).build() }, ModItems.WHITE_CHEDDAR_CHEESE.get()));
 
     }
 }

@@ -35,7 +35,17 @@ public class ModItemModelProvider extends ItemModelProvider{
 
         spawnEggItem(ModItems.CAPYBARA_SPAWN_EGG);
 
-
+        simpleItem(ModItems.CORN);
+        simpleItem(ModItems.CORN_SEEDS);
+        simpleItem(ModItems.POPCORN);
+        simpleItem(ModItems.WHITE_CHEDDAR_CHEESE);
+        simpleItem(ModItems.WHITE_CHEDDAR_POPCORN);
+        simpleItem(ModItems.BLACK_TEA);
+        simpleItem(ModItems.BLACK_TEA_SEEDS);
+        simpleItem(ModItems.ICED_TEA);
+        simpleItem(ModItems.SWEET_ICED_TEA);
+        simpleItem(ModItems.HERSHEY_KISS);
+        simpleItem(ModItems.COOKIES_AND_CREME_HERSHEY_KISS);
     }
 
 

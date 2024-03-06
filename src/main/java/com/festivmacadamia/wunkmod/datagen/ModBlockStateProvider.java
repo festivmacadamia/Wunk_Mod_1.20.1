@@ -3,6 +3,8 @@ package com.festivmacadamia.wunkmod.datagen;
 
 import com.festivmacadamia.wunkmod.WunkMod;
 import com.festivmacadamia.wunkmod.block.ModBlocks;
+import com.festivmacadamia.wunkmod.block.custom.BlackTeaCropBlock;
+import com.festivmacadamia.wunkmod.block.custom.CornCropBlock;
 import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.models.blockstates.MultiVariantGenerator;
@@ -32,11 +34,38 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-
+        makeBlackTeaCrop((CropBlock) ModBlocks.BLACK_TEA_CROP.get(), "black_tea_stage", "black_tea_stage");
+        makeCornCrop(((CropBlock) ModBlocks.CORN_CROP.get()), "corn_stage", "corn_stage");
     }
     
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    }
+
+    public void makeBlackTeaCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> blackTeaStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] blackTeaStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((BlackTeaCropBlock) block).getAgeProperty()),
+                new ResourceLocation(WunkMod.MOD_ID, "block/" + textureName + state.getValue(((BlackTeaCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+    }
+
+    public void makeCornCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> cornStates(state, block, modelName, textureName);
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] cornStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((CornCropBlock) block).getAgeProperty()),
+                new ResourceLocation(WunkMod.MOD_ID, "block/" + textureName + state.getValue(((CornCropBlock) block).getAgeProperty()))).renderType("cutout"));
+        return models;
     }
 
 

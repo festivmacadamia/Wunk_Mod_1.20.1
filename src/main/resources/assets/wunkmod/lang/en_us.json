@@ -3,6 +3,24 @@
 
   "block.wunkmod.ricky": "Ricky",
 
+  "block.wunkmod.corn_crop": "Corn Crop",
+  "block.wunkmod.black_tea_crop": "Black Tea Crop",
+
+  "item.wunkmod.corn_seeds": "Corn Seeds",
+  "item.wunkmod.black_tea_seeds": "Black Tea Seeds",
+
+  "item.wunkmod.corn": "Corn",
+  "item.wunkmod.black_tea": "Black Tea Leaves",
+
+  "item.wunkmod.cheddar_cheese": "Cheddar Cheese",
+  "item.wunkmod.white_cheddar_cheese": "White Cheddar Cheese",
+  "item.wunkmod.popcorn": "Popcorn",
+  "item.wunkmod.white_cheddar_popcorn": "White Cheddar Popcorn",
+  "item.wunkmod.iced_tea": "Iced Tea",
+  "item.wunkmod.sweet_iced_tea": "Sweet Tea",
+  "item.wunkmod.hershey_kiss": "Hershey Kiss",
+  "item.wunkmod.cookies_and_creme_hershey_kiss": "Cookies and Creme Hershey Kiss",
+
   "item.wunkmod.capybara_spawn_egg": "Capybara Spawn Egg",
   "entity.wunkmod.capybara": "Capybara"
 }
